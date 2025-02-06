@@ -1,6 +1,6 @@
 # Pizza-menu
 
-It’s a basic small wep app about pizza menu, using React.js
+It’s a basic small wep page about pizza menu, using React.js
 
 ## deployed site : https://fast-pizza-menu.netlify.app/
 
