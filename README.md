@@ -1,4 +1,4 @@
-ne the repo# Pizza-menu
+# Pizza-menu
 
 It’s a basic small wep app about pizza menu, using React.js
 
