@@ -12,7 +12,7 @@ const pizzaData = [
     ingredients: "Tomato and mozarella",
     price: 10,
     img: "pizzas/margherita.jpg",
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "Pizza Spinaci",
@@ -84,20 +84,16 @@ function Menu() {
   );
 }
 function Pizza({ pizzaObj }) {
-  if (pizzaObj.soldOut) {
-    return null;
-  } else {
-    return (
-      <li className="pizza">
-        <img src={pizzaObj.img} alt={pizzaObj.name} />
-        <div>
-          <h3>{pizzaObj.name}</h3>
-          <p>{pizzaObj.ingredients}</p>
-          <span>{pizzaObj.price}</span>
-        </div>
-      </li>
-    );
-  }
+  return (
+    <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
+      <img src={pizzaObj.img} alt={pizzaObj.name} />
+      <div>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
+      </div>
+    </li>
+  );
 }
 function Footer() {
   const currentHour = new Date().getHours();
